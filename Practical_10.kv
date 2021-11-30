@@ -1,0 +1,99 @@
+#: kivy 1.9.0
+
+<LoginWindow>:
+    canvas.before:
+        Color:
+            rgba: (1,1,1,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        text: "Registration Form"
+        color: (0,0,0,1)
+        font_size: 60
+        center_x: root.width * 0.5
+        center_y: root.top * 0.8
+    Label:
+        id: firstname_label
+        text: "First Name"
+        color: (0,0,0,1)
+        font_size: 30
+        right: firstname_input.x - 80
+        center_y: root.top * 0.6
+    TextInput:
+        id: firstname_input
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: root.top * 0.6
+        height: 35
+        width: 300
+    Label:
+        id: lastname_label
+        text: "Last name"
+        color: (0,0,0,1)
+        font_size: 30
+        right: lastname_input.x - 80
+        center_y: root.top * 0.5
+    TextInput:
+        id: lastname_input
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: root.top * 0.5
+        height: 35
+        width: 300
+    Label:
+        id: email_label
+        text: "Email"
+        color: (0,0,0,1)
+        font_size: 30
+        right: email_input.x - 80
+        center_y: root.top * 0.4
+    TextInput:
+        id: email_input
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: root.top * 0.4
+        height: 35
+        width: 300
+    
+    Label:
+        id: password_label
+        text: "Password"
+        color: (0,0,0,1)
+        font_size: 30
+        right: password_input.x - 80
+        center_y: root.top * 0.3
+    TextInput:
+        id: password_input
+        font_size: 20
+        password: True
+        center_x: root.width * 0.5
+        center_y: root.top * 0.3
+        height: 35
+        width: 300
+
+    Label:
+        id: cpassword_label
+        text: "ConfirmPassword"
+        color: (0,0,0,1)
+        font_size: 30
+        right: cpassword_input.x - 80
+        center_y: root.top * 0.2
+    TextInput:
+        id: cpassword_input
+        font_size: 20
+        password: True
+        center_x: root.width * 0.5
+        center_y: root.top * 0.2
+        height: 35
+        width: 300
+
+    Button:
+        id: register_button
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: password_input.y - 125
+        text: "Registration"
+        size: (125,60)
+        on_press: root.login()
+    
